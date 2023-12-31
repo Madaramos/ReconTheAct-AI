@@ -155,15 +155,15 @@ class _ProfilePageState extends State<ProfilePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Acceuil',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add, color: Color.fromARGB(255, 134, 4, 163)),
-            label: 'Add',
+            label: 'Ajouter',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person,color: Color.fromARGB(255, 134, 4, 163)),
-            label: 'Profile',
+            label: 'Profil',
           ),
         ],
         onTap: (int index) {

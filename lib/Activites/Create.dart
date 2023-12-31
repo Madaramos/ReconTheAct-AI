@@ -62,7 +62,7 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
         _imageFile = File(image.path);
         _identifieResult = categorie;
       } else {
-        print('No image selected.');
+        print('Aucune image sélectionnée.');
       }
     });
   }
@@ -80,7 +80,7 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Activity', style: TextStyle(color: Colors.white)),
+        title: Text('Ajouter une activité', style: TextStyle(color: Colors.white)),
         backgroundColor: Color.fromARGB(255, 134, 4, 163),
       ),
       body: SingleChildScrollView(
@@ -136,7 +136,7 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
                     ? _identifieResult!.map((result) {
                         String label = result["label"].toString().replaceAll(RegExp(r'[0-9]'), '');
                         return Text(
-                          "Categorie : $label",
+                          "Catégorie : $label",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 22.0,
@@ -152,7 +152,7 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
                 : Image.network('https://i.imgur.com/sUFH1Aq.png'),
             SizedBox(height: 20),
             FloatingActionButton(
-              tooltip: 'Select Image',
+              tooltip: 'Sélectionner une image',
               onPressed: () {
                 selectImage();
               },
@@ -194,7 +194,7 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
 
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text("Activity added successfully!"),
+                        content: Text("Activité ajoutée avec succès !"),
                       ),
                     );
 
@@ -206,19 +206,19 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
                   } catch (e) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text("Error adding activity: $e"),
+                        content: Text("Erreur lors de l'ajout de l'activité : $e"),
                       ),
                     );
                   }
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text("Please fill all fields and select an image."),
+                      content: Text("Veuillez remplir tous les champs et sélectionner une image."),
                     ),
                   );
                 }
               },
-              child: Text("Add Activity"),
+              child: Text("Ajouter une activité"),
             ),
           ],
         ),
@@ -227,15 +227,15 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Accueil',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add, color: Color.fromARGB(255, 134, 4, 163)),
-            label: 'Add',
+            label: 'Ajouter',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            label: 'Profil',
           ),
         ],
         onTap: (int index) {
@@ -245,10 +245,10 @@ class _CreateActivityScreenState extends State<CreateActivityScreen> {
               MaterialPageRoute(builder: (context) => Home()),
             );
           } else if (index == 1) {
-            // Handle Add navigation
+            // Gérer la navigation Ajouter
 
           } else if (index == 2) {
-            // Handle Profile navigation
+            // Gérer la navigation Profil
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => ProfilePage()),

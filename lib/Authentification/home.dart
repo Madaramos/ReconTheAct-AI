@@ -103,15 +103,15 @@ bottomNavigationBar: BottomNavigationBar(
   items: const <BottomNavigationBarItem>[
     BottomNavigationBarItem(
       icon: Icon(Icons.home),
-      label: 'Home',
+      label: 'Acceuil',
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.add),
-      label: 'Add',
+      label: 'Ajouter',
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.person),
-      label: 'Profile',
+      label: 'Profil',
     ),
   ],
   onTap: (int index) {
@@ -164,17 +164,17 @@ bottomNavigationBar: BottomNavigationBar(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  activity['titre'] ?? '',
+                  activity['titre'] ?? 'No title available',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 8),
                 Text(
-                  activity['lieu'] ?? '',
+                  activity['lieu'] ?? 'No location available',
                   style: TextStyle(fontSize: 16, color: Colors.grey),
                 ),
                 SizedBox(height: 8),
                 Text(
-                  "\$${activity['prix'] ?? ''}",
+                  "\$${activity['prix'] ?? 'No price available'}",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ],
