@@ -1,0 +1,8 @@
+0 ACTING
+1 board games
+2 driving
+3 foods
+4 shopping
+5 sports
+6 videogames
+7 watching movies and tvshows

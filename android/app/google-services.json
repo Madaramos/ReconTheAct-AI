@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "86451927015",
+    "project_id": "recontheact-ai",
+    "storage_bucket": "recontheact-ai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86451927015:android:fcfb72deab8dabb3676f42",
+        "android_client_info": {
+          "package_name": "com.example.recognizeme_ia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_dgPn-cOp8CHoU3Pz-P8vmLJRJF4yP_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
